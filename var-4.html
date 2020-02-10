@@ -5,14 +5,21 @@
 	<script>
 		var a = prompt('Видите 6 значное число', );
 		var c = a;
-		var b = String(c).split("");
-		alert(b[0]);
-		alert(b[1]);
-		alert(b[2]);
-		alert(b[3]);
-		alert(b[4]);
-		alert(b[5]);
+		
+		if (isNaN(c)) {
+            alert('Вы указали неверное значение!');
+            exit;
+		}
 	
+		var b = String(c).split("");
+		
+		document.write(b[0] + "<br>");
+		document.write(b[1] + "<br>");
+		document.write(b[2] + "<br>");
+		document.write(b[3] + "<br>");
+		document.write(b[4] + "<br>");
+		document.write(b[5] + "<br>");
+		
 		var restart = confirm("Начать заново?");
 		if(restart==true)
 			location.reload();
